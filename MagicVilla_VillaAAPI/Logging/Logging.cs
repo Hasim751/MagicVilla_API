@@ -2,7 +2,7 @@
 {
     public class Logging : ILogging
     {
-       public void Log(string message, string type)
+        public void Log(string message, string type)
         {
             if (type == "error")
             {

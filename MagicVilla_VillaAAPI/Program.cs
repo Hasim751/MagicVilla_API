@@ -1,8 +1,7 @@
+using MagicVilla_VillaAAPI;
 using MagicVilla_VillaAAPI.Data;
 using MagicVilla_VillaAAPI.Logging;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
-using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     .WriteTo.File("log/villaLogs.txt", rollingInterval:RollingInterval.Day).CreateLogger();
 */
 //builder.Host.UseSerilog(); // It will tell application to use SeriLog instead default logger
-
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddControllers(option =>
 {
     option.ReturnHttpNotAcceptable = true;

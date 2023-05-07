@@ -7,7 +7,7 @@ namespace MagicVilla_VillaAAPI.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+
         }
         public DbSet<Villa> Villas { get; set; }
 
@@ -25,7 +25,7 @@ namespace MagicVilla_VillaAAPI.Data
                     Sqft = 550,
                     ImageUrl = "https://cdn.lecollectionist.com/lc/production/uploads/photos/house-1910/2018-04-30-214088d759242733859024dd8690041f.jpg?q=65",
                     Created = DateTime.Now,
-                    
+
                 }
                 );
         }
